@@ -1,0 +1,63 @@
+.header {
+  background: $white;
+  &__nav {
+    height: 64px;
+    padding: 0 24px;
+    @include breakpoint-up(large) {
+      height: 80px;
+    }
+  }
+  &__logo {
+    > img {
+      display: block;
+      width: 140px;
+    }
+  }
+
+  &__menu {
+    width: 24px;
+    height: 24px;
+    > i {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $darkBlue;
+      box-shadow: inset 0 0 0 0, 0 -5px 0 0, 0 5px 0 0;
+    }
+  }
+
+  &__links {
+    align-self: stretch;
+    > a {
+      position: relative;
+      margin: 0 15px;
+      font-size: $font-sm;
+      transition: color 0.2s ease-in-out;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+      &:hover {
+        color: $darkBlue;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    font-size: $font-sm;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
