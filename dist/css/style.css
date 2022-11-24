@@ -133,16 +133,14 @@ button {
 .header {
   background: hsl(0deg, 0%, 100%);
 }
-@media (max-width: 63.9375em) {
-  .header .overlay {
-    position: fixed;
-    top: 4rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(rgba(45, 49, 77, 0.7), transparent);
-    visibility: hidden;
-  }
+.header .overlay {
+  position: fixed;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(45, 49, 77, 0.7), transparent);
+  visibility: hidden;
 }
 .header__nav {
   height: 4rem;
@@ -156,11 +154,11 @@ button {
   display: block;
   width: 140px;
 }
-.header__menu {
+.header__toggle {
   width: 24px;
   height: 24px;
 }
-.header__menu > i {
+.header__toggle > i {
   display: block;
   position: relative;
   width: 100%;
@@ -168,7 +166,7 @@ button {
   background: hsl(233deg, 26%, 24%);
   transition: background 0.2s ease-in-out;
 }
-.header__menu > i::before, .header__menu > i::after {
+.header__toggle > i::before, .header__toggle > i::after {
   content: "";
   position: absolute;
   left: 0;
@@ -177,10 +175,10 @@ button {
   background: hsl(233deg, 26%, 24%);
   transition: transform 0.2s ease-in-out;
 }
-.header__menu > i::before {
+.header__toggle > i::before {
   top: -5px;
 }
-.header__menu > i::after {
+.header__toggle > i::after {
   top: 5px;
 }
 .header__links {
@@ -203,13 +201,11 @@ button {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
-@media (min-width: 64em) {
-  .header__links > a:hover {
-    color: hsl(233deg, 26%, 24%);
-  }
-  .header__links > a:hover::after {
-    opacity: 1;
-  }
+.header__links > a:hover {
+  color: hsl(233deg, 26%, 24%);
+}
+.header__links > a:hover::after {
+  opacity: 1;
 }
 .header__cta {
   font-size: 0.875rem;
@@ -218,37 +214,34 @@ button {
 .header__cta:hover {
   opacity: 0.75;
 }
-@media (max-width: 63.9375em) {
-  .header.open .header__menu > i {
-    background-color: transparent;
-  }
-  .header.open .header__menu > i::before, .header.open .header__menu > i::after {
-    top: 0;
-  }
-  .header.open .header__menu > i::before {
-    transform: rotate(45deg);
-  }
-  .header.open .header__menu > i::after {
-    transform: rotate(-45deg);
-  }
-  .header.open .header__links {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 5.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    padding: 1.25rem;
-    border-radius: 0.25rem;
-    background: hsl(0deg, 0%, 100%);
-    z-index: 9999;
-  }
-  .header.open .header__links > a {
-    display: block;
-    margin: 0;
-    padding: 0.75rem 0;
-    text-align: center;
-    font-size: 1rem;
-    color: hsl(233deg, 26%, 24%);
-  }
+.header__menu {
+  position: fixed;
+  top: 5.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  background: hsl(0deg, 0%, 100%);
+  visibility: hidden;
+  z-index: 9999;
+}
+.header__menu > a {
+  display: block;
+  margin: 0;
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: hsl(233deg, 26%, 24%);
+}
+.header.open .header__toggle > i {
+  background-color: transparent;
+}
+.header.open .header__toggle > i::before, .header.open .header__toggle > i::after {
+  top: 0;
+}
+.header.open .header__toggle > i::before {
+  transform: rotate(45deg);
+}
+.header.open .header__toggle > i::after {
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=style.css.map */

@@ -1,22 +1,23 @@
 .header {
   background: $white;
-  @include breakpoint-down(medium) {
-    .overlay {
-      position: fixed;
-      top: 4rem;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(rgba($darkBlue, 0.7), transparent);
-      visibility: hidden;
-    }
+
+  .overlay {
+    position: fixed;
+    top: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(rgba($darkBlue, 0.7), transparent);
+    visibility: hidden;
   }
+
   &__nav {
     height: 4rem;
     @include breakpoint-up(large) {
       height: 5rem;
     }
   }
+
   &__logo {
     > img {
       display: block;
@@ -24,7 +25,7 @@
     }
   }
 
-  &__menu {
+  &__toggle {
     width: 24px;
     height: 24px;
     > i {
@@ -71,12 +72,10 @@
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
       }
-      @include breakpoint-up(large) {
-        &:hover {
-          color: $darkBlue;
-          &::after {
-            opacity: 1;
-          }
+      &:hover {
+        color: $darkBlue;
+        &::after {
+          opacity: 1;
         }
       }
     }
@@ -90,42 +89,40 @@
     }
   }
 
+  &__menu {
+    position: fixed;
+    top: 5.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 0.25rem;
+    background: $white;
+    visibility: hidden;
+    z-index: 9999;
+    > a {
+      display: block;
+      margin: 0;
+      padding: 0.75rem 0;
+      text-align: center;
+      font-size: 1rem;
+      color: $darkBlue;
+    }
+  }
+
   // open styles
-  @include breakpoint-down(medium) {
-    &.open {
-      .header__menu {
-        > i {
-          background-color: transparent;
-          &::before,
-          &::after {
-            top: 0;
-          }
-          &::before {
-            transform: rotate(45deg);
-          }
-          &::after {
-            transform: rotate(-45deg);
-          }
+  &.open {
+    .header__toggle {
+      > i {
+        background-color: transparent;
+        &::before,
+        &::after {
+          top: 0;
         }
-      }
-      .header__links {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        top: 5.5rem;
-        left: 1.5rem;
-        right: 1.5rem;
-        padding: 1.25rem;
-        border-radius: 0.25rem;
-        background: $white;
-        z-index: 9999;
-        > a {
-          display: block;
-          margin: 0;
-          padding: 0.75rem 0;
-          text-align: center;
-          font-size: 1rem;
-          color: $darkBlue;
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
         }
       }
     }
