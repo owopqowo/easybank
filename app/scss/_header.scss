@@ -13,7 +13,6 @@
   }
   &__nav {
     height: 4rem;
-    padding: 0 24px;
     @include breakpoint-up(large) {
       height: 5rem;
     }
@@ -72,10 +71,12 @@
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
       }
-      &:hover {
-        color: $darkBlue;
-        &::after {
-          opacity: 1;
+      @include breakpoint-up(large) {
+        &:hover {
+          color: $darkBlue;
+          &::after {
+            opacity: 1;
+          }
         }
       }
     }
@@ -114,13 +115,14 @@
         top: 5.5rem;
         left: 1.5rem;
         right: 1.5rem;
-        padding: 20px;
+        padding: 1.25rem;
         border-radius: 0.25rem;
         background: $white;
         z-index: 9999;
         > a {
           display: block;
-          margin: 15px 0;
+          margin: 0;
+          padding: 0.75rem 0;
           text-align: center;
           font-size: 1rem;
           color: $darkBlue;
