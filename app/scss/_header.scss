@@ -9,7 +9,6 @@
       right: 0;
       background: linear-gradient(rgba($darkBlue, 0.7), transparent);
       visibility: hidden;
-      z-index: -99999;
     }
   }
   &__nav {
@@ -118,6 +117,7 @@
         padding: 20px;
         border-radius: 0.25rem;
         background: $white;
+        z-index: 9999;
         > a {
           display: block;
           margin: 15px 0;

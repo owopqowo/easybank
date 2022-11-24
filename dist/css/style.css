@@ -2,7 +2,6 @@
   0% {
     opacity: 0;
     visibility: hidden;
-    z-index: -99999;
   }
   100% {
     opacity: 1;
@@ -13,7 +12,6 @@
   0% {
     opacity: 0;
     visibility: hidden;
-    z-index: -99999;
   }
   100% {
     opacity: 1;
@@ -33,7 +31,6 @@
   100% {
     opacity: 0;
     visibility: hidden;
-    z-index: -99999;
   }
 }
 
@@ -45,7 +42,6 @@
   100% {
     opacity: 0;
     visibility: hidden;
-    z-index: -99999;
   }
 }
 .fade-out {
@@ -141,7 +137,6 @@ button {
     right: 0;
     background: linear-gradient(rgba(45, 49, 77, 0.7), transparent);
     visibility: hidden;
-    z-index: -99999;
   }
 }
 .header__nav {
@@ -240,6 +235,7 @@ button {
     padding: 20px;
     border-radius: 0.25rem;
     background: hsl(0deg, 0%, 100%);
+    z-index: 9999;
   }
   .header.open .header__links > a {
     display: block;
