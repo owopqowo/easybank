@@ -56,15 +56,28 @@ button {
 .container {
   max-width: 72.375rem;
   margin: 0 auto;
+  &--pAll {
+    padding: 5.5rem 1.5rem;
+  }
   &--px {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+  &--py {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
   }
   &--pl {
     padding-left: 1.5rem;
   }
   &--pr {
     padding-right: 1.5rem;
+  }
+  &--pt {
+    padding-top: 5.5rem;
+  }
+  &--pb {
+    padding-bottom: 5.5rem;
   }
 }
 

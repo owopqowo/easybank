@@ -107,15 +107,28 @@ button {
   max-width: 72.375rem;
   margin: 0 auto;
 }
+.container--pAll {
+  padding: 5.5rem 1.5rem;
+}
 .container--px {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.container--py {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
 }
 .container--pl {
   padding-left: 1.5rem;
 }
 .container--pr {
   padding-right: 1.5rem;
+}
+.container--pt {
+  padding-top: 5.5rem;
+}
+.container--pb {
+  padding-bottom: 5.5rem;
 }
 
 .flex {
@@ -321,12 +334,12 @@ button {
 }
 .hero__text {
   padding-top: 1.875rem;
-  padding-bottom: 5.5rem;
   text-align: center;
 }
 @media (min-width: 64em) {
   .hero__text {
     text-align: left;
+    padding-bottom: 1.875rem;
   }
 }
 .hero__text-title {
