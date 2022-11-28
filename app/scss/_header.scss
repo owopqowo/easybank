@@ -1,5 +1,7 @@
 .header {
   background: $white;
+  position: relative;
+  z-index: 5;
 
   .overlay {
     position: fixed;
@@ -78,14 +80,6 @@
           opacity: 1;
         }
       }
-    }
-  }
-
-  &__cta {
-    font-size: $font-sm;
-    transition: opacity 0.2s ease-in-out;
-    &:hover {
-      opacity: 0.75;
     }
   }
 

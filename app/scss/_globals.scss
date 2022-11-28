@@ -17,6 +17,7 @@ body {
   font-family: 'Public Sans', sans-serif;
   font-size: $font-med;
   color: $grayishBlue;
+  overflow-x: hidden;
 }
 
 ul,
@@ -25,6 +26,16 @@ li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 a,
@@ -43,8 +54,18 @@ button {
 
 // Spacing
 .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  max-width: 72.375rem;
+  margin: 0 auto;
+  &--px {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
 }
 
 // Flexbox
@@ -66,8 +87,13 @@ button {
   padding: 1rem 1.875rem;
   border-radius: 50px;
   background: linear-gradient(to right, $limeGreen, $brightCyan);
-  color: $white;
   font-weight: 400;
+  font-size: $font-sm;
+  color: $white;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 // Visibility
