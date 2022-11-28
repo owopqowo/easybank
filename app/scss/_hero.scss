@@ -55,20 +55,14 @@
       text-align: left;
       padding-bottom: 1.875rem;
     }
-    &-title {
-      margin-bottom: 1rem;
-      color: $darkBlue;
-      font-size: 1.875rem;
-      font-weight: 300;
-      @include breakpoint-up(large) {
-        font-size: $font-xlg;
-      }
-    }
     &-desc {
       margin-bottom: 1.875rem;
       line-height: 1.6;
       font-size: $font-med;
       color: $grayishBlue;
+      @include breakpoint-up(large) {
+        font-size: $font-lg;
+      }
     }
   }
 }

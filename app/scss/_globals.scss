@@ -17,7 +17,6 @@ body {
   font-family: 'Public Sans', sans-serif;
   font-size: $font-med;
   color: $grayishBlue;
-  overflow-x: hidden;
 }
 
 ul,
@@ -50,6 +49,10 @@ button {
   border: 0;
   background: none;
   cursor: pointer;
+}
+
+.main {
+  overflow-x: hidden;
 }
 
 // Spacing
@@ -92,6 +95,30 @@ button {
   }
   &-ai-c {
     align-items: center;
+  }
+}
+
+// Text
+.h1,
+.h2,
+.h3 {
+  line-height: 1.15;
+  font-weight: 300;
+  color: $darkBlue;
+}
+.h1 {
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  @include breakpoint-up(large) {
+    font-size: $font-xxlg;
+  }
+}
+.h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.875rem;
+  @include breakpoint-up(large) {
+    margin-bottom: 1.875rem;
+    font-size: 2.25rem;
   }
 }
 
