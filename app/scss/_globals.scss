@@ -124,15 +124,29 @@ button {
 
 // Buttons
 .button-gradient {
+  overflow: hidden;
+  position: relative;
   padding: 1rem 1.875rem;
   border-radius: 50px;
   background: linear-gradient(to right, $limeGreen, $brightCyan);
   font-weight: 400;
   font-size: $font-sm;
   color: $white;
-  transition: opacity 0.2s ease-in-out;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($white, 0.25);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
   &:hover {
-    opacity: 0.75;
+    &::before {
+      opacity: 1;
+    }
   }
 }
 
